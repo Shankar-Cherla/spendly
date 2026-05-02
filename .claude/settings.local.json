@@ -5,7 +5,11 @@
       "Bash(python *)",
       "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\" -Force -File | ForEach-Object { $_.FullName })",
       "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\",\".git\" -File | Where-Object { $_.Extension -in '.py','.sql','.html','.css','.js','.json','.txt','.md','.db' -or $_.Name -eq '.gitignore' -or $_.Name -eq '.env' } | ForEach-Object { $_.FullName })",
-      "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\",\".git\" -File | ForEach-Object { $_.FullName } | Sort-Object)"
+      "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\",\".git\" -File | ForEach-Object { $_.FullName } | Sort-Object)",
+      "Bash(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(grep -E \"\\\\.\\(html|py|css\\)$\")"
     ]
   }
 }
