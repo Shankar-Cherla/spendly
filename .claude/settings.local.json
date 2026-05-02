@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(bash *)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\" -Force -File | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\",\".git\" -File | Where-Object { $_.Extension -in '.py','.sql','.html','.css','.js','.json','.txt','.md','.db' -or $_.Name -eq '.gitignore' -or $_.Name -eq '.env' } | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"D:\\\\GEN AI\\\\projects\\\\expense-tracker\\\\expense-tracker\" -Recurse -Exclude \"venv\",\".git\" -File | ForEach-Object { $_.FullName } | Sort-Object)"
     ]
   }
 }
